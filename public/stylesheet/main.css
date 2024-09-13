@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+body {
+    margin: 0px;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+    z-index: 1;
+}
+
+.nav-bar>.nav-image {
+    width: 20%;
+    height: 60px;
+    padding-left: 5%;
+}
+
+.nav-image>div {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-bar>.nav-image>div>img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-bar>.navbar-text {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: x-large;
+}
+
+.navbar-text>div {
+    width: 50%;
+}
+
+.navbar-text>div>a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-text>div>a:hover {
+    color: chartreuse;
+}
+
+.main-container {
+    padding-top: 60px;
+}
+
+div.image-banner>img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+div.image-banner {
+    width: 100%;
+    position: relative;
+}
+
+div.image-overlay {
+    position: absolute;
+    top: 40%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: capitalize;
+    width: 70%;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+}
+
+div.image-overlay>h1 {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+div.content-container>div.container>h1 {
+    text-align: center;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(179, 175, 175);
+}
+
+div.intro>h1 {
+    text-align: center;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(179, 175, 175);
+}
+
+div.intro>p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: large;
+    text-align: center;
+    padding: 5%;
+    padding-top: 0%;
+    padding-bottom: 2%;
+}
+
+
+
+@media (max-width: 300px) {
+    div.image-overlay {
+        top: 50%;
+    }
+
+    div.image-overlay>p {
+        display: none;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 426px) {
+    div.image-overlay {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 769px) {}
+
+@media(max-width: 500px) {}
+
+.footer {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+.form {
+    padding-top: 5%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-align {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: larger;
+    margin-bottom: 5%;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2px solid black;
+}
+
+input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+form {
+    width: 100%;
+}
+
+.form-align>h1 {
+    text-align: center;
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+textarea {
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.btn-center>input[type="submit"] {
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-center>input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-center>input[type="submit"]:focus::placeholder {
+    color: transparent;
+}
+
+div.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    height: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+div.flex-container {
+    display: flex;
+    width: 80%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px black;
+    flex-direction: column;
+}
+
+
+div.container {
+    background-color: #FFF8E8;
+    padding-bottom: 20px;
+}
+
+.flex-command {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-command>a {
+    height: 40px;
+    width: 60px;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: fantasy;
+    text-decoration: none;
+    color: blue;
+}
+
+.flex-command>a.delete {
+    height: 40px;
+    width: 60px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: fantasy;
+    text-decoration: none;
+    color: red;
+}
+
+.flex-command>a.delete:hover {
+    background-color: red;
+    color: white;
+}
+
+.flex-command>a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.flex-header {
+    font-size: x-large;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.flex-content {
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    padding: 2%;
+}
+
+.flex-author,
+.flex-date {
+    font-size: large;
+    font-family: cursive;
+    margin-top: 5px;
+}
+
+div.flex-item {
+    margin: 5px;
+    border-bottom: 2px solid #FFF8E8;
+    padding: 2%;
+    width: 100%;
+}

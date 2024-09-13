@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+    <div class="main-container">
+        <div class="form-align">
+            <h1>Post Center</h1>
+            <% if (locals.blog) { %>
+                <div class="form">
+                    <form action="/posts/edit/<%= blog.id %>" method="POST">
+                        <input type="text" name="header" id="header" value="<%= blog.header %>"
+                            placeholder="Input your Post Heading">
+                        <textarea name="content" id="" cols="30" rows="10"
+                            placeholder="Input your Post"><%= blog.content%> </textarea>
+                        <input type="text" name="author" id="author" value="<%= blog.author %>"
+                            placeholder="Input the Author Name">
+
+                        <div class="btn-center">
+                            <input type="submit" value="Update">
+                        </div>
+                    </form>
+                </div>
+                <% } else { %>
+                    <div class="form">
+                        <form action="/posts" method="POST">
+                            <input type="text" name="header" id="header" placeholder="Input your Post Heading">
+                            <textarea name="content" id="" cols="30" rows="10" placeholder="Input your Post"></textarea>
+                            <input type="text" name="author" id="author" placeholder="Input the Author Name">
+
+                            <div class="btn-center">
+                                <input type="submit" value="Post">
+                            </div>
+                        </form>
+                    </div>
+                    <% } %>
+        </div>
+    </div>
+    </div>
+    <%- include("partials/footer.ejs") %>

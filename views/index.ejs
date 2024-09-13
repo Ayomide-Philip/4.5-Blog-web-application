@@ -1,0 +1,65 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="main-container">
+        <div class="image-container">
+            <div class="image-banner">
+                <img src="./images/pexels-cottonbro-5052875.jpg" alt="Blogger">
+            </div>
+            <div class="image-overlay">
+                <h1>Programming Palace | Code Captain</h1>
+                <p>Welcome to Programming Palace, where coders of all levels come to learn, share, and grow! At Code
+                    Captain, we are committed to providing you with the latest programming news, tutorials, and
+                    resources. Join us on our journey to becoming the ultimate coders. Together, we can rule the digital
+                    world! 😎💻</p>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="intro">
+                <h1>Programming Palace | Code Captain</h1>
+                <p>Welcome to Programming Palace, the ultimate destination for coders of all levels who are eager to
+                    expand their knowledge and skills in the world of programming. Our platform is designed to cater to
+                    everyone, from beginners taking their first steps in coding to seasoned professionals looking to
+                    stay ahead of the curve. At Programming Palace, we believe that learning should be accessible,
+                    engaging, and above all, rewarding. That's why we are committed to providing you with the latest and
+                    most comprehensive programming news, tutorials, and resources. Whether you're interested in web
+                    development, software engineering, data science, or any other tech field, you'll find a wealth of
+                    information and tools here to help you succeed. Join our growing community of passionate
+                    programmers, share your insights, and collaborate on exciting projects. Together, we can conquer the
+                    digital world, one line of code at a time. Let's embark on this journey towards coding excellence
+                    and make a difference in the ever-evolving tech landscape.</p>
+            </div>
+            <div class="container">
+                <h1>Recent Post</h1>
+                <div>
+                    <div class="flex-container">
+                        <% for ( var i=0; i < blog.length; i++ ){ %>
+                            <div class="flex-item">
+                                <div class="flex-header">
+                                    <%= blog[i].header %>
+                                </div>
+                                <div class="flex-content">
+                                    <%= blog[i].content %>
+                                </div>
+                                <div class="flex-author">
+                                    Author: <%= blog[i].author %>
+                                </div>
+                                <div class="flex-date">
+                                    Date:<%= blog[i].date %> 
+                                </div>
+                                <div class="flex-command">
+                                    <a href="/posts/edit/<%= blog[i].id %>" class="btn edit">Edit</a>
+                                    <a href="/posts/delete/<%= blog[i].id %>" class="btn delete">Delete</a>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
